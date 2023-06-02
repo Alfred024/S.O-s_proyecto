@@ -69,41 +69,8 @@ public class Exe {
                     break;
             }
         }while(option != 7);
-        ordenarTiempos();
     
     }
 
-    public static void ordenarTiempos2(){
-        int menorIndex = 0;
-        int vuelta = 0;
-        
-        while(vuelta < 3){
-            for (int i = vuelta; i < vuelta-3; i++) {
-                if(tiempos[i] < tiempos[menorIndex] && tiempos[i] != 0){
-                    menorIndex = i;
-                }
-            }
-            intercambio(vuelta, menorIndex);
-            vuelta++;
-        }
-    }
-    //Métoo burbuja porque tengo entendico que gasta menos recursos que los demás
-    public static void ordenarTiempos() {
-        int menorIndex;
-        for (int j = 0; j < 3; j++) {
-            menorIndex = j;
-            for (int i = 0; i < 3; i++) {
-                if (tiempos[i] < tiempos[menorIndex]) {
-                    intercambio(i, menorIndex);
-                    menorIndex = i;
-                }
-            }
-        }
-    }
-
-    public static void intercambio(int indexActual, int menorIndex) {
-        int aux = tiempos[indexActual];
-        tiempos[indexActual] = tiempos[menorIndex];
-        tiempos[menorIndex] = aux;
-    }
+    
 }
